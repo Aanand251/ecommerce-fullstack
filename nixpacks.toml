@@ -1,0 +1,12 @@
+nixpacks:
+  phases:
+    setup:
+      nixPkgs:
+        - maven
+        - jdk17
+    build:
+      cmds:
+        - cd store && mvn clean package -DskipTests
+    start:
+      cmds:
+        - cd store && java -jar target/store-0.0.1-SNAPSHOT.jar

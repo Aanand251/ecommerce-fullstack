@@ -17,6 +17,10 @@ jwt.expiration=86400000
 razorpay.key.id=your_razorpay_key_id
 razorpay.key.secret=your_razorpay_key_secret
 
+# ─── CORS CONFIGURATION ──────────────────────────────────────────────
+# Comma-separated list of allowed origins (supports wildcards)
+cors.allowed.origins=http://localhost:*,http://127.0.0.1:*,https://*.vercel.app
+
 # ─── LOGGING CONFIGURATION ───────────────────────────────────────────
 # Log levels: TRACE, DEBUG, INFO, WARN, ERROR
 logging.level.root=INFO

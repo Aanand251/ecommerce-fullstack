@@ -7,7 +7,11 @@ class AppConstants {
   AppConstants._(); // Private constructor to prevent instantiation
 
   // ─── API CONFIGURATION ─────────────────────────────────────────────
-  static const String baseUrl = 'http://localhost:8081/api';
+  // Use environment variable or fallback to localhost for development
+  static const String baseUrl = String.fromEnvironment(
+    'API_BASE_URL',
+    defaultValue: 'http://localhost:8081/api',
+  );
 
   // Auth endpoints
   static const String loginEndpoint = '/auth/login';
@@ -54,7 +58,10 @@ class AppConstants {
   static const Duration longAnimation = Duration(milliseconds: 500);
 
   // ─── RAZORPAY CONFIGURATION ────────────────────────────────────────
-  static const String razorpayKeyId = 'rzp_test_SRtdBQxL8DjzHK';
+  static const String razorpayKeyId = String.fromEnvironment(
+    'RAZORPAY_KEY_ID',
+    defaultValue: 'rzp_test_SRtdBQxL8DjzHK',
+  );
 }
 
 /// Error messages displayed to users
