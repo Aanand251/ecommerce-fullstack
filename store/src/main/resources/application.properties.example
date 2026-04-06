@@ -1,0 +1,37 @@
+spring.application.name=store
+spring.datasource.url=jdbc:postgresql://localhost:5432/ecommerce_db
+spring.datasource.username=your_database_username
+spring.datasource.password=your_database_password
+server.port=8081
+
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+jwt.secret=your_jwt_secret_key_minimum_256_bits_long
+jwt.expiration=86400000
+
+razorpay.key.id=your_razorpay_key_id
+razorpay.key.secret=your_razorpay_key_secret
+
+# ─── LOGGING CONFIGURATION ───────────────────────────────────────────
+# Log levels: TRACE, DEBUG, INFO, WARN, ERROR
+logging.level.root=INFO
+logging.level.com.example.store=INFO
+logging.level.com.example.store.security=DEBUG
+logging.level.com.example.store.service=INFO
+
+# Log pattern with timestamp, level, and request ID
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+
+# ─── RATE LIMITING CONFIGURATION ─────────────────────────────────────
+# These are defaults - can be overridden via code
+rate.limit.auth.requests=5
+rate.limit.auth.duration=60
+rate.limit.api.requests=100
+rate.limit.api.duration=60
+rate.limit.admin.requests=50
+rate.limit.admin.duration=60

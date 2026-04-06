@@ -1,0 +1,46 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Errors
+    - avoid_print
+    - avoid_relative_lib_imports
+    - avoid_types_as_parameter_names
+    - no_duplicate_case_values
+    - prefer_void_to_null
+    - use_key_in_widget_constructors
+
+    # Style
+    - camel_case_types
+    - constant_identifier_names
+    - directives_ordering
+    - empty_constructor_bodies
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+    - prefer_final_fields
+    - prefer_final_locals
+    - prefer_is_empty
+    - prefer_is_not_empty
+    - prefer_single_quotes
+    - use_rethrow_when_possible
+
+    # Documentation
+    - package_api_docs
+
+    # Pub
+    - sort_pub_dependencies
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+  errors:
+    missing_required_param: error
+    missing_return: error
+    invalid_annotation_target: ignore
+
+  language:
+    strict-casts: true
+    strict-raw-types: true
